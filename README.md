@@ -1,8 +1,8 @@
-#FLutter-Note-App
+# FLutter-Note-App
 
-##Modern notes-taking app built with Flutter and powered by Firebase for authentication and data storage. It uses Riverpod for state management and demonstrates clean, scalable architecture using a feature-first folder structure.
+## Modern notes-taking app built with Flutter and powered by Firebase for authentication and data storage. It uses Riverpod for state management and demonstrates clean, scalable architecture using a feature-first folder structure.
 
-##Features
+## Features
 - Firebase Authentication (Email & Password)
 
 - Real-time note storage with Cloud Firestore
@@ -15,7 +15,7 @@
 
 - Powered by flutter_riverpod for robust state management
 
-##Folder Structure
+## Folder Structure
 - lib/
   ├── core/               # App-wide constants, themes, and utilities
   ├── features/           # Feature-specific logic (auth, notes, home)
@@ -25,7 +25,7 @@
   ├── utils/              # Helpers and shared utilities
   └── main.dart           # Entry point
 
-#Dependencies
+# Dependencies
 ```
 flutter:
   sdk: flutter
@@ -38,7 +38,7 @@ google_fonts: ^6.2.1
 another_flushbar: ^1.10.30
 ```
 
-#Getting Started
+# Getting Started
 1. Clone the repo
 - git clone https://github.com/Mathias-Kabango3/flutter-note-app.git
 - cd flutter-note-app
