@@ -16,7 +16,8 @@
 - Powered by flutter_riverpod for robust state management
 
 ## Folder Structure
-- lib/
+<pre><code>
+  lib/
   ├── core/               # App-wide constants, themes, and utilities
   ├── features/           # Feature-specific logic (auth, notes, home)
   ├── models/             # App data models (Note, UserProfile)
@@ -24,7 +25,7 @@
   ├── services/           # Firebase service classes
   ├── utils/              # Helpers and shared utilities
   └── main.dart           # Entry point
-
+</code></pre>
 # Dependencies
 ```
 flutter:
