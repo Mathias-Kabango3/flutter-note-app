@@ -55,10 +55,13 @@ class NoteCard extends ConsumerWidget {
                         .read(notesControllerProvider)
                         .deleteNote(noteId: note.id!);
                     // Dismiss the dialog
+                    // ignore: use_build_context_synchronously
                     Navigator.of(dialogContext).pop();
                   } catch (e) {
                     // Handle potential errors during deletion
+                    // ignore: use_build_context_synchronously
                     Navigator.of(dialogContext).pop();
+                    // ignore: use_build_context_synchronously
                     ScaffoldMessenger.of(context).showSnackBar(
                       SnackBar(
                         content: Text(e.toString()),

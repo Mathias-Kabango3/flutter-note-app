@@ -4,6 +4,7 @@ import '../../core/constants/app_colors.dart';
 import '../../models/note.dart';
 import '../../providers/auth_providers.dart';
 import '../../providers/service_providers.dart';
+import 'package:another_flushbar/flushbar.dart';
 
 class AddEditNoteScreen extends ConsumerStatefulWidget {
   /// The note to be edited. If null, a new note will be created.
@@ -71,6 +72,17 @@ class _AddEditNoteScreenState extends ConsumerState<AddEditNoteScreen> {
           title: _titleController.text.trim(),
           content: _contentController.text.trim(),
         );
+        // ignore: use_build_context_synchronously
+        Navigator.pop(context);
+        Flushbar(
+          message: "Note updated...",
+          duration: const Duration(seconds: 3),
+          margin: const EdgeInsets.all(8),
+          borderRadius: BorderRadius.circular(8),
+          backgroundColor: Colors.green,
+          flushbarPosition: FlushbarPosition.TOP,
+          // ignore: use_build_context_synchronously
+        ).show(context);
       } else {
         // --- ADD NEW NOTE ---
         await firestoreService.addNote(
@@ -78,9 +90,18 @@ class _AddEditNoteScreenState extends ConsumerState<AddEditNoteScreen> {
           title: _titleController.text.trim(),
           content: _contentController.text.trim(),
         );
+        // ignore: use_build_context_synchronously
+        Navigator.pop(context);
+        Flushbar(
+          message: "Note added...",
+          duration: const Duration(seconds: 3),
+          margin: const EdgeInsets.all(8),
+          borderRadius: BorderRadius.circular(8),
+          backgroundColor: Colors.green,
+          flushbarPosition: FlushbarPosition.TOP,
+          // ignore: use_build_context_synchronously
+        ).show(context);
       }
-      // If successful, pop the screen to go back to the HomeScreen
-      if (mounted) Navigator.of(context).pop();
     } catch (e) {
       setState(() => _isLoading = false);
       if (mounted) {
