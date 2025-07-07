@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_fonts/google_fonts.dart';
-import '../auth/auth_form.dart';
+import 'widgets/auth_form.dart';
 
 import '../../core/constants/app_colors.dart';
 import 'auth_controller.dart';
